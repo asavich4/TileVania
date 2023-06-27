@@ -15,8 +15,8 @@ TagManager:
   - Ladder
   - Player
   - BackDrop
-  - 
-  - 
+  - Bounce
+  - Slime
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: BackDrop
     uniqueID: 3773477025
     locked: 0
+  - name: Mushroom Layer
+    uniqueID: 2607953587
+    locked: 0
   - name: Water
     uniqueID: 634747439
     locked: 0
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Ladder
     uniqueID: 2888882753
+    locked: 0
+  - name: Enemy
+    uniqueID: 3978276233
     locked: 0
   - name: Player
     uniqueID: 1017205329

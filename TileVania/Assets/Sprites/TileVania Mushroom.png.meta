@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 644572c7fdcd50d4fa2cd4115872c553
+guid: 165947be98c9e1a43a5ac1daf68dd8fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,7 +52,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -127,150 +127,26 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 7
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9faed7a53a9d7a044930eae5eb2f6c06
-      internalID: 1135544364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 7
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 172da19996ccb264aa0fd3f93f53c19c
-      internalID: -1130508827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_2
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 7
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2374e88585a4ad64c983ece46dd4d6ed
-      internalID: 1382589288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_3
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 7
-        width: 33
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cea1d54830ed1c47b48d781a9db059f
-      internalID: 1783399856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_4
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 7
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82760b602fa97eb47b7cab729f3d3372
-      internalID: 40969016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPA_Enemy_Right_5
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 7
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f39913c325f3a824e9eef26403a1fd8f
-      internalID: -222875801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -15, y: -2}
+      - {x: -15, y: 5}
+      - {x: -11, y: 12}
+      - {x: -7, y: 13}
+      - {x: 7, y: 13}
+      - {x: 11, y: 12}
+      - {x: 15, y: 5}
+      - {x: 15, y: -2}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SPA_Enemy_Right_5: -222875801
-      SPA_Enemy_Right_0: 1135544364
-      SPA_Enemy_Right_4: 40969016
-      SPA_Enemy_Right_3: 1783399856
-      SPA_Enemy_Right_2: 1382589288
-      SPA_Enemy_Right_1: -1130508827
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

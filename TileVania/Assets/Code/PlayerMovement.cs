@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider2D;
+    BoxCollider2D myFeetCollider2D;
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
      
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider2D = GetComponent<CapsuleCollider2D>();
+        myFeetCollider2D = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -31,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnJump(InputValue Value){
-        if(Value.isPressed && myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))){
+        if(Value.isPressed && myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             myRigidbody.velocity += new Vector2(0f, jumpSpeed);
         }
     }
@@ -45,12 +47,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Ladder(){
         bool playerHasVerticalSpeed = false;
+        float pauseCheck = Input.GetAxis("Vertical");
 
         if(myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ladder"))){
             Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, (moveInput.y * runSpeed));
             myRigidbody.velocity = climbVelocity;
             playerHasVerticalSpeed = true;
             myRigidbody.gravityScale = 0;
+            if(pauseCheck == 0){
+                playerHasVerticalSpeed = false;
+            }
+
         }
         if(!myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Ladder"))){
             playerHasVerticalSpeed = false;
