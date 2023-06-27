@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider2D;
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
+    bool playerLife = true;
      
     void Start()
     {
@@ -23,13 +24,26 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(playerLife == true){
         Run();
         FlipSprite();
         Ladder();
+        Death();
+        }
+        else{
+            return;
+        }
     }
     
     void OnMove(InputValue value){
         moveInput = value.Get<Vector2>();
+    }
+
+    void Death(){
+        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime"))){
+            playerLife = false;
+            myAnimator.StopPlayback();
+        }
     }
 
     void OnJump(InputValue Value){

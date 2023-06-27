@@ -201,7 +201,7 @@ TilemapRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -6673,7 +6673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319351227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8019471, y: 2.6752872, z: -10.154535}
+  m_LocalPosition: {x: -8.698053, y: -6.2847123, z: -10.154535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7040,7 +7040,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8019471, y: 2.6752872, z: -10.154535}
+  m_LocalPosition: {x: -8.698053, y: -6.2847123, z: -10.154535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7246,7 +7246,7 @@ TilemapRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.016129017, y: 0.016129017, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -7563,7 +7563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473139595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8019471, y: 2.6752872, z: -10.154535}
+  m_LocalPosition: {x: -8.698053, y: -6.2847123, z: -10.154535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8069,7 +8069,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -51470,7 +51470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107233891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8019471, y: 2.6752872, z: -10.154535}
+  m_LocalPosition: {x: -8.698053, y: -6.2847123, z: -10.154535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51550,11 +51550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6810588584402914622, guid: 8b83895c524881742a1b7313c5b6eee5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.43
+      value: -4.07
       objectReference: {fileID: 0}
     - target: {fileID: 6810588584402914622, guid: 8b83895c524881742a1b7313c5b6eee5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.44
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 6810588584402914622, guid: 8b83895c524881742a1b7313c5b6eee5, type: 3}
       propertyPath: m_LocalPosition.z
