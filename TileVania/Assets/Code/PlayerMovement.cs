@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider2D;
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
+    [SerializeField] float deathBounce;
     bool playerLife = true;
      
     void Start()
@@ -40,9 +41,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Death(){
-        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime"))){
+        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch"))){
             playerLife = false;
-            myAnimator.StopPlayback();
+            myAnimator.SetTrigger("Dying");
+            myRigidbody.velocity += new Vector2(0f, deathBounce);
         }
     }
 
