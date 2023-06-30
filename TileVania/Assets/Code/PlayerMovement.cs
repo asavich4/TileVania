@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider2D;
     BoxCollider2D myFeetCollider2D;
+
+    [SerializeField] GameObject arrow;
+    [SerializeField]Transform bow;
+
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
     [SerializeField] float deathBounce;
@@ -41,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Death(){
-        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) || myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch"))){
+        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) ||  myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch"))){
             playerLife = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity += new Vector2(0f, deathBounce);
@@ -88,5 +92,9 @@ public class PlayerMovement : MonoBehaviour
         if(playerHasHorizontalSpeed){
         transform.localScale = new Vector2 (Mathf.Sign( myRigidbody.velocity.x), 1f);
         }
+    }
+
+    void OnShoot(InputValue value){
+        Instantiate(arrow, bow.position, transform.rotation);
     }
 }

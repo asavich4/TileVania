@@ -4,37 +4,47 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-     CapsuleCollider2D myCapsuleCollider2D;
-     BoxCollider2D boxFlip;
-     Rigidbody2D myRigidbody;
+    CapsuleCollider2D myCapsuleCollider2D;
+    CircleCollider2D headBop;
+    BoxCollider2D boxFlip;
+    Rigidbody2D myRigidbody;
+    Animator myAnimator;
 
-     [SerializeField] float slimeSpeed;
+    [SerializeField] float slimeSpeed;
+    [SerializeField] float destroyWaitTime;
+    
+
     void Start()
     {
         myCapsuleCollider2D = GetComponent<CapsuleCollider2D>();
-         myRigidbody = GetComponent<Rigidbody2D>();
-         boxFlip = GetComponent<BoxCollider2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
+        boxFlip = GetComponent<BoxCollider2D>();
+        headBop = GetComponent<CircleCollider2D>();
+        myAnimator = GetComponent<Animator>();
     }
 
-    void Update()
+    void Update(){
+        Walk();
+    }
+
+    void SpritFlip()
     {
-        Walk(); 
-    }
-
-    void SpritFlip(){
         slimeSpeed = -slimeSpeed;
-        transform.localScale = new Vector2 (-(Mathf.Sign( myRigidbody.velocity.x)), 1f);
-    }
-     void OnTriggerExit2D(Collider2D other) {
-        SpritFlip();
+        transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), 1f);
     }
 
-    void Walk(){
-        bool move = true;
-        if(move){
-            myRigidbody.velocity = new Vector2(slimeSpeed, 0);
-        }
-        
+    
+    void Walk()
+    {
+        myRigidbody.velocity = new Vector2(slimeSpeed, myRigidbody.velocity.y);
+    }
+
+
+
+
+    void DestroySlime()
+    {
+        Destroy(gameObject);
     }
 }
 
