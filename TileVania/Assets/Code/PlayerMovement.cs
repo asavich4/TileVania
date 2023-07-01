@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
     [SerializeField] float deathBounce;
-    bool playerLife = true;
+    public bool playerLife = true;
      
     void Start()
     {
@@ -97,4 +97,5 @@ public class PlayerMovement : MonoBehaviour
     void OnShoot(InputValue value){
         Instantiate(arrow, bow.position, transform.rotation);
     }
+
 }
