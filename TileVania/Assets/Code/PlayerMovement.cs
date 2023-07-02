@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     CapsuleCollider2D myCapsuleCollider2D;
     BoxCollider2D myFeetCollider2D;
 
-    [SerializeField] GameObject arrow;
-    [SerializeField]Transform bow;
+    [SerializeField] GameObject Arrow;
+    [SerializeField]Transform Bow;
 
     [SerializeField] float runSpeed = 5;
     [SerializeField] float jumpSpeed;
@@ -94,8 +95,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnShoot(InputValue value){
-        Instantiate(arrow, bow.position, transform.rotation);
+    void OnFire(InputValue value){
+     Instantiate(Arrow, Bow.position, transform.rotation);
     }
-
 }

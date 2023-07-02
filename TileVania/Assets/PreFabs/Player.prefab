@@ -190,11 +190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3be5a3a0b3e9964abc4cda5a574c36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 9053208276157851004, guid: ba43c139159811949a7cd2008ab4277a, type: 3}
-  bow: {fileID: 2884685756868125574}
+  Arrow: {fileID: 0}
+  Bow: {fileID: 0}
   runSpeed: 5
   jumpSpeed: 10
   deathBounce: 20
+  playerLife: 1
 --- !u!61 &523017640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9141645166574393505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4361544, y: 0.2986408, z: 0.7716123}
+  m_LocalPosition: {x: 0.32, y: -0.27, z: 0.7716123}
   m_LocalScale: {x: 1, y: 0.96135354, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
