@@ -19,7 +19,7 @@ public class SlimeDeath : MonoBehaviour
     {
         if (IsPlayerJumpingOnSlime(collision))
         {
-            //BouncePlayer();
+            BouncePlayer();
             SlimeActions();
             //slime.slimeLife = false; 
         }
