@@ -38,5 +38,16 @@ public class Arrow : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody2d.velocity.x), 1f);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "Slime"){
+            Destroy(other.gameObject);
+        }
+        Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D other) {
+        Destroy(gameObject);
+    }
 }
 
