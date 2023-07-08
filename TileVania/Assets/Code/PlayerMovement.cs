@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -97,5 +98,10 @@ public class PlayerMovement : MonoBehaviour
 
     void OnFire(InputValue value){
      Instantiate(Arrow, Bow.position, transform.rotation);
+    }
+
+    void OnRespawn(InputValue value){
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; 
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
