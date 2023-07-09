@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             playerLife = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity += new Vector2(0f, deathBounce);
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
