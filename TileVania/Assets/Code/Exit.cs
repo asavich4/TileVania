@@ -7,7 +7,9 @@ public class Exit : MonoBehaviour
 {
     [SerializeField] float delay = 1;
     void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag == "Player"){
         StartCoroutine(LoadTimer());
+        }
     }
 
     IEnumerator LoadTimer(){
