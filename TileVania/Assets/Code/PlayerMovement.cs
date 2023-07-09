@@ -97,7 +97,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnFire(InputValue value){
-     Instantiate(Arrow, Bow.position, transform.rotation);
+        Instantiate(Arrow, Bow.position, transform.rotation);
+        myAnimator.SetBool("isShooting", true);
+        StartCoroutine(ResetShootingAnimation());
+    }
+
+    IEnumerator ResetShootingAnimation(){
+        float animationDuration = 0.25f;
+        yield return new WaitForSeconds(animationDuration);
+        myAnimator.SetBool("isShooting", false);
     }
 
     void OnRespawn(InputValue value){

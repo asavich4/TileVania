@@ -47,6 +47,9 @@ public class Arrow : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
+        if (other.collider.CompareTag("Slime")){
+            Destroy(other.gameObject);
+        }
         Destroy(gameObject);
     }
 }
