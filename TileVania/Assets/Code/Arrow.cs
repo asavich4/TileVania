@@ -11,6 +11,8 @@ public class Arrow : MonoBehaviour
     [SerializeField] float xArrow;
     [SerializeField] float yArrow;
 
+    [SerializeField] int slimePoints = 10;
+
     void Start()
     {
         myRigidbody2d = GetComponentInChildren<Rigidbody2D>();
@@ -41,6 +43,7 @@ public class Arrow : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Slime"){
+            FindObjectOfType<GameSession>().AddToScore(slimePoints);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);
@@ -48,6 +51,7 @@ public class Arrow : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.collider.CompareTag("Slime")){
+            FindObjectOfType<GameSession>().AddToScore(slimePoints);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);

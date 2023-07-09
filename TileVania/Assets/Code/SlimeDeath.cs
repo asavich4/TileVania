@@ -5,12 +5,14 @@ using UnityEngine;
 public class SlimeDeath : MonoBehaviour{
 
     [SerializeField] float bounceForce = 5f;
+    [SerializeField] int slimePoints = 10;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         PlayerMovement player = collision.collider.GetComponent<PlayerMovement>();
         if (player != null && collision.contacts[0].point.y > transform.position.y)
         {
+            FindObjectOfType<GameSession>().AddToScore(slimePoints);
             BouncePlayer(player);
             Destroy(transform.parent.gameObject);
         }
