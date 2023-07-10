@@ -7,6 +7,7 @@ using TMPro;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 5;
+    [SerializeField] int pointToEarnLife = 100;
     [SerializeField] float delay = 1f;
     [SerializeField] int playerScore = 0;
     [SerializeField] TextMeshProUGUI livesText;
@@ -43,19 +44,20 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int pointsToAdd){
         playerScore += pointsToAdd;
         scoreText.text = playerScore.ToString();
-        ScoreToLife();
-    }
-
-    void ScoreToLife(){
-        if(playerScore >= 500){
-            playerScore -=500;
-            playerLives++;
-        }
+        AddingLife();
     }
 
     void ResetGameSession(){
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+    void AddingLife(){
+        if(playerScore > pointToEarnLife){
+            playerScore -= pointToEarnLife;
+            playerLives = playerLives + 1;
+            livesText.text = playerLives.ToString();
+            scoreText.text = playerScore.ToString();
+        }
     }
 
     void TakeLife(){

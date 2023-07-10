@@ -418,6 +418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLives: 5
+  pointToEarnLife: 500
   delay: 1
+  playerScore: 0
   livesText: {fileID: 103792980}
   scoreText: {fileID: 187364735}
