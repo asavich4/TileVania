@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Death(){
-        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) ||  myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch"))){
+        if( myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime")) ||  myCapsuleCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("DeathTouch")) || myFeetCollider2D.IsTouchingLayers(LayerMask.GetMask("Slime"))){
             playerLife = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity += new Vector2(0f, deathBounce);

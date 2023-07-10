@@ -31,11 +31,6 @@ public class GameSession : MonoBehaviour
         StartCoroutine(DelayRestart());
     }
 
-    public void AddToScore(int pointsToAdd){
-        playerScore += pointsToAdd;
-        scoreText.text = playerScore.ToString();
-    }
-
     IEnumerator DelayRestart(){
         yield return new WaitForSeconds(delay);
         if(playerLives > 1){
@@ -43,6 +38,18 @@ public class GameSession : MonoBehaviour
         }
         else{
             ResetGameSession();
+        }
+    }
+    public void AddToScore(int pointsToAdd){
+        playerScore += pointsToAdd;
+        scoreText.text = playerScore.ToString();
+        ScoreToLife();
+    }
+
+    void ScoreToLife(){
+        if(playerScore >= 500){
+            playerScore -=500;
+            playerLives++;
         }
     }
 

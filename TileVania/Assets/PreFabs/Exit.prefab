@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 1.5
   exitScore: 100
+  volume: 0.35
   exitSound: {fileID: 8300000, guid: af3b6df493c83604cb3c95fed1eb1bdc, type: 3}
 --- !u!82 &-7815922108191566107
 AudioSource:
