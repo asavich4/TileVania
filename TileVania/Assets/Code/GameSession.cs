@@ -50,6 +50,7 @@ public class GameSession : MonoBehaviour
     void ResetGameSession(){
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+        FindObjectOfType<ScenePersist>().ResetSP();
     }
     void AddingLife(){
         if(playerScore > pointToEarnLife){
